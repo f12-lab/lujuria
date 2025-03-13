@@ -1,0 +1,150 @@
+body {
+    font-family: 'Lucida Sans', Arial, sans-serif;
+    background-color: #1a002a; /* Fondo oscuro estilo club nocturno */
+    color: #f2e6ff; /* Texto blanco con un tono suave */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+h1, h2 {
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #e600e6; /* Efecto de neón */
+    color: #f2e6ff; /* Texto claro con tonos morados */
+}
+
+form {
+    background: linear-gradient(145deg, #300040, #240033); /* Fondo degradado */
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 5px rgba(255, 0, 255, 0.5); /* Efecto de brillo */
+    max-width: 400px;
+    width: 100%;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+input[type="text"], input[type="password"], input[type="submit"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    font-size: 16px;
+    color: #1a002a;
+}
+
+input[type="text"], input[type="password"] {
+    background-color: #ffe6ff; /* Campo claro */
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #ff33ff; /* Botón rosa fuerte */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 5px #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #cc00cc; /* Color más oscuro al pasar el mouse */
+    box-shadow: 0px 0px 20px #ff33ff;
+}
+
+a {
+    text-decoration: none;
+    color: #ff99ff;
+    font-size: 18px;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: #ffffff;
+    text-shadow: 0px 0px 5px #ff33ff;
+}
+
+#result {
+    font-weight: bold;
+    color: #ff80ff; /* Resultado con color llamativo */
+    text-shadow: 0 0 5px #ff80ff, 0 0 10px #e64ce6;
+}
+
+.welcome-container {
+    text-align: center;
+    padding: 20px;
+}
+
+.highlight {
+    color: #ff66ff; /* Neón llamativo */
+    text-shadow: 0 0 10px #ff33ff, 0 0 20px #cc00cc;
+}
+
+.search-form input[type="text"] {
+    font-size: 18px;
+    color: #1a002a;
+    background-color: #ffe6ff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-bottom: 10px;
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.3);
+    transition: box-shadow 0.3s ease;
+}
+
+.search-form input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(255, 0, 255, 0.7);
+}
+
+.search-form button {
+    font-size: 16px;
+    background-color: #ff33ff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.search-form button:hover {
+    background-color: #cc00cc;
+    transform: scale(1.05);
+}
+
+.result-text {
+    font-size: 20px;
+    color: #ff99ff;
+    text-shadow: 0 0 5px #ff99ff, 0 0 10px #cc33cc;
+    margin-top: 20px;
+}
+
+.logout-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #ff99ff;
+    text-decoration: none;
+}
+
+.logout-link:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #ff33ff;
+}

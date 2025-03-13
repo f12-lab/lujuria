@@ -14,7 +14,7 @@ RUN a2enmod headers && a2enmod rewrite
 RUN service apache2 restart
 
 # Configuramos un VirtualHost en Apache
-COPY apache/vhost.conf /etc/apache2/sites-available/000-default.conf
+COPY config/apache/vhost.conf /etc/apache2/sites-available/000-default.conf
 
 # Crear el usuario dante
 RUN useradd -ms /bin/bash dante && \
@@ -22,7 +22,7 @@ RUN useradd -ms /bin/bash dante && \
 
 # Añadir aplicación vulnerable
 RUN mkdir -p /var/www/html/vulnerable-app
-COPY apache/vulnerable-app /var/www/html/vulnerable-app
+COPY config/apache/vulnerable-app /var/www/html/vulnerable-app
 RUN chown -R www-data:www-data /var/www/html/vulnerable-app && chmod -R 755 /var/www/html/vulnerable-app
 
 # Exponer el puerto de HTTP (no HTTPS)

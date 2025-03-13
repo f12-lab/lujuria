@@ -1,6 +1,9 @@
 = Lujuria
-Manuel L. Quero
-:toc:
+:author: Manuel L. Quero
+:revdate: 2025-03-13
+:toc: left
+:doctype: book
+:media: prepress
 
 == Tipos de ataques XSS
 

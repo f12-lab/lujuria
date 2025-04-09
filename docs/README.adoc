@@ -4,23 +4,27 @@
 :toc: left
 :doctype: book
 
-== Tipos de ataques XSS
+== Ataque XSS
+
+Este ataque permite a los atacantes implantar scripts maliciosos en un sitio web legítimo (también víctima del atacante) para ejecutar un script en el navegador de un usuario desprevenido que visita dicho sitio y afectarlo, ya sea robando credenciales, redirigiendo al usuario a otro sitio malicioso, o para cambiar la apariencia de un sitio web.
+
+=== Tipos de ataques XSS
 
 Existen tres tipos de ataques XSS:
 
-=== Reflejado/Indirecto
+==== Reflejado/Indirecto
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el servidor refleja el código malicioso en la respuesta. Se trata de la variedad de XSS más simple y el script malicioso que busca afectar el navegador de la víctima es fácilmente modificable, probablemente sin que el usuario note el ataque.
 
 image::assets/reflected.png[Reflejado]
 
-=== Persistente/Directo/Almacenado
+==== Persistente/Directo/Almacenado
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el servidor almacena el código malicioso en la base de datos. De esta forma persiste el script inofensivo, hasta que el valor es recuperado por la aplicación y utilizado para conformar parte del documento HTML. Ejemplos de esto pueden ser: los comentarios de sitios web, entradas de blog, nombres de usuario, chats, formularios de contacto, detalle de alguna orden, etc.
 
 image::assets/stored.png[Persistente]
 
-=== Document Object Model (DOM)
+==== Document Object Model (DOM)
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el código malicioso se ejecuta en el navegador de la víctima. DOM facilita la estructura de documentos como HTML o XML y permite a los programas modificar la estructura, estilo y contenido del documento. El ataque DOM XSS se produce cuando el código malicioso se ejecuta en el navegador de la víctima, pero no se envía al servidor. Esto lleva a que el usuario ejecute código desde el lado del cliente sin saber que lo está haciendo.
 

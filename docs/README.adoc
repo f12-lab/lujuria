@@ -80,11 +80,16 @@ Sería conveniente utilizar una distribución Linux, es recomendable usar Kali L
 
 === Despliegue de la máquina
 
+Como requisito, necesitaremos tener instalado docker y docker-compose.
+
+Podemos ver como instalar docker para varias distribuciones de linux -> https://docs.docker.com/engine/install/[Instalar Docker]
+
+Podemos ver como instalar docker-compose para varias distribuciones de linux -> https://docs.docker.com/compose/install/linux/[Instalar Docker-Compose]
+
 Necesitaremos descargar primeramente el auto_deploy.sh, el cual se muestra como una pirámide en la página. Después deberemos meter en un directorio tanto el auto_deploy.sh como el archivo de lujuria.tar, y ejecutar los siguientes comandos.
 
 [source,bash]
 ----
-$ sudo chmod +x auto_deploy.sh
 $ sudo bash auto_deploy.sh lujuria.tar
 ----
 

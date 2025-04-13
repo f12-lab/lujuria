@@ -88,6 +88,8 @@ Podemos ver como instalar docker-compose para varias distribuciones de linux -> 
 
 Necesitaremos descargar primeramente el auto_deploy.sh, el cual se muestra como una pirámide en la página. Después deberemos meter en un directorio tanto el auto_deploy.sh como el archivo de lujuria.tar, y ejecutar los siguientes comandos.
 
+(Si el auto_deploy no tiene permisos se los damos mediante *chmod +x*). 
+
 [source,bash]
 ----
 $ sudo bash auto_deploy.sh lujuria.tar

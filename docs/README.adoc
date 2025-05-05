@@ -1,6 +1,5 @@
 = Lujuria
 :author: Manuel L. Quero
-:revdate: 2025-03-13
 :toc: left
 :doctype: book
 
@@ -16,12 +15,14 @@ Existen tres tipos de ataques XSS:
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el servidor refleja el código malicioso en la respuesta. Se trata de la variedad de XSS más simple y el script malicioso que busca afectar el navegador de la víctima es fácilmente modificable, probablemente sin que el usuario note el ataque.
 
+[.text-center]
 image::assets/reflected.png[Reflejado]
 
 ==== Persistente/Directo/Almacenado
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el servidor almacena el código malicioso en la base de datos. De esta forma persiste el script inofensivo, hasta que el valor es recuperado por la aplicación y utilizado para conformar parte del documento HTML. Ejemplos de esto pueden ser: los comentarios de sitios web, entradas de blog, nombres de usuario, chats, formularios de contacto, detalle de alguna orden, etc.
 
+[.text-center]
 image::assets/stored.png[Persistente]
 
 ==== Document Object Model (DOM)
@@ -65,6 +66,7 @@ Sin olvidar las librerías como JQuery, en donde utiliza métodos específicos p
     wrapInner()
 ====
 
+[.text-center]
 image::assets/dom.png[DOM]
 
 == Solucionar la máquina

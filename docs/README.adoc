@@ -3,6 +3,25 @@
 :toc: left
 :doctype: book
 
+== Despliegue de la máquina
+
+Sería conveniente utilizar una distribución Linux, es recomendable usar Kali Linux.
+
+Como requisito, necesitaremos tener instalado docker y docker-compose.
+
+Podemos ver como instalar docker para varias distribuciones de linux -> https://docs.docker.com/engine/install/[Instalar Docker]
+
+Podemos ver como instalar docker-compose para varias distribuciones de linux -> https://docs.docker.com/compose/install/linux/[Instalar Docker-Compose]
+
+Necesitaremos descargar primeramente el auto_deploy.sh, el cual se muestra como una pirámide en la página. Después deberemos meter en un directorio tanto el auto_deploy.sh como el archivo de lujuria.tar, y ejecutar los siguientes comandos.
+
+(Si el auto_deploy no tiene permisos se los damos mediante *chmod +x*). 
+
+[source,bash]
+----
+$ sudo bash auto_deploy.sh lujuria.tar
+----
+
 == Ataque XSS
 
 Este ataque permite a los atacantes implantar scripts maliciosos en un sitio web legítimo (también víctima del atacante) para ejecutar un script en el navegador de un usuario desprevenido que visita dicho sitio y afectarlo, ya sea robando credenciales, redirigiendo al usuario a otro sitio malicioso, o para cambiar la apariencia de un sitio web.
@@ -15,15 +34,13 @@ Existen tres tipos de ataques XSS:
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el servidor refleja el código malicioso en la respuesta. Se trata de la variedad de XSS más simple y el script malicioso que busca afectar el navegador de la víctima es fácilmente modificable, probablemente sin que el usuario note el ataque.
 
-[.text-center]
-image::assets/reflected.png[Reflejado]
+image::assets/reflected.png[Reflejado,align=center]
 
 ==== Persistente/Directo/Almacenado
 
 El atacante envía un enlace malicioso a la víctima, la víctima hace clic en el enlace y el servidor almacena el código malicioso en la base de datos. De esta forma persiste el script inofensivo, hasta que el valor es recuperado por la aplicación y utilizado para conformar parte del documento HTML. Ejemplos de esto pueden ser: los comentarios de sitios web, entradas de blog, nombres de usuario, chats, formularios de contacto, detalle de alguna orden, etc.
 
-[.text-center]
-image::assets/stored.png[Persistente]
+image::assets/stored.png[Persistente,align=center]
 
 ==== Document Object Model (DOM)
 
@@ -66,8 +83,7 @@ Sin olvidar las librerías como JQuery, en donde utiliza métodos específicos p
     wrapInner()
 ====
 
-[.text-center]
-image::assets/dom.png[DOM]
+image::assets/dom.png[DOM,align=center]
 
 == Solucionar la máquina
 
@@ -78,26 +94,7 @@ En nuestro caso, actuaremos como *_víctima_* y como *_atacante_*.
 * Desde el punto de vista de la *_víctima_* deberemos saber las credenciales para loguearnos y dejar la cuenta abierta. 
 * Desde el punto de vista del *_atacante_* no deberemos saber las credenciales del usuario, pero le enviaremos una campaña de phising ficticia a la víctima.
 
-Sería conveniente utilizar una distribución Linux, es recomendable usar Kali Linux.
-
-=== Despliegue de la máquina
-
-Como requisito, necesitaremos tener instalado docker y docker-compose.
-
-Podemos ver como instalar docker para varias distribuciones de linux -> https://docs.docker.com/engine/install/[Instalar Docker]
-
-Podemos ver como instalar docker-compose para varias distribuciones de linux -> https://docs.docker.com/compose/install/linux/[Instalar Docker-Compose]
-
-Necesitaremos descargar primeramente el auto_deploy.sh, el cual se muestra como una pirámide en la página. Después deberemos meter en un directorio tanto el auto_deploy.sh como el archivo de lujuria.tar, y ejecutar los siguientes comandos.
-
-(Si el auto_deploy no tiene permisos se los damos mediante *chmod +x*). 
-
-[source,bash]
-----
-$ sudo bash auto_deploy.sh lujuria.tar
-----
-
-Como el despliegue es en local, para comprobar que todo se ha realizado correctamente, deberemos crear dos usuarios en nuestro navegador de confianza:
+Como el despliegue es en local, para comprobar que todo se ha realizado correctamente, deberemos crear dos usuarios en nuestro navegador de confianza (víctima y atacante):
 
 [cols="1,1"]
 |===

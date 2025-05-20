@@ -61,6 +61,8 @@ Algunas funciones en JavaScript que pueden ser un indicador de un posible punto 
 
 Sin olvidar las librerías como JQuery, en donde utiliza métodos específicos para facilitar algunas funciones tradicionales del propio JavaScript, u otras librerías sin la adecuada codificación de los datos:
 
+<<<
+
     $.parseHTML()
     add()
     after()
@@ -121,9 +123,11 @@ Con la máquina desplegada, abrimos nuestra sesión en firefox e introducimos la
 
 ==== Despliegue de servidor a la escucha
 
-Siendo atacantes, vamos a crear un archivos .py con el siguiente script. Este script crea un servidor local que está a la escucha en el puerto 1337. 
+Siendo atacantes, vamos a crear un archivo .py con el siguiente script. Este script crea un servidor local que está a la escucha en el puerto 1337. 
 
 Código tomado de https://skf.gitbook.io/asvs-write-ups/httponly-session-hijacking-xss/httponly-session-hijacking-xss#exploitation[Security Knowledge Framework]
+
+<<<
 
 .Ver código
 [%collapsible]
@@ -144,7 +148,7 @@ if __name__ == "__main__":
     app.run(host='0.0.0.0', port=1337)
 ----
 ====
-Para poder utilizar este código deberemos tener descargado python3 y después descargaremos las librerias flask y requests. Por último iniciamos el programa.
+Para poder utilizar este código deberemos tener descargado python3 y después descargaremos las librerías flask y requests. Por último, iniciamos el programa.
 
 [source,bash]
 ----
@@ -223,6 +227,8 @@ Desde el punto de vista del cliente, lo mejor es *desactivar JavaScript*, de est
 * *Codificación* -> Escapar de la entrada del usuario para que el navegador la interprete solo como datos, no como código. El tipo más reconocible de codificación en el desarrollo web está escapando HTML, que convierte los caracteres como en < y >, respectivamente.
 
 * *Validación* -> La validación es el acto de filtrar la entrada del usuario para que se eliminen todas las partes malintencionadas, sin eliminar necesariamente todo el código que contiene. Uno de los tipos de validación más reconocibles en el desarrollo web es permitir algunos elementos HTML (como <em> y <strong>) pero no permitir otros (como <script>).
+
+<<<
 
 * *Clasificar en listas* -> Poner en la lista negra como no válida aquellas cadenas que coincidan con el patrón, la lista negra puede resultar complejo al tener que plantearse las posibilidades. Podríamos usar listas blancas, en lugar de definir un patrón prohibido, un enfoque de lista blanca define un patrón permitido y marca el ingreso como inválido si no coincide con este patrón. Esto resulta mucho más sencillo y longevo (de larga duración).
 
